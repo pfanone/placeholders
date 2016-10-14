@@ -25,6 +25,7 @@ function run() {
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     }
+    var_dump($config['endpoints']);
     // check if the request comes from github server
     foreach ($config['endpoints'] as $endpoint) {
         // check if the push came from the right repository and branch
@@ -61,6 +62,7 @@ function run() {
             return true;
         }
     }
+    var_dump("DONE");
 }
 try {
     if (!isset($_POST['payload'])) {
