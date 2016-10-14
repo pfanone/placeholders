@@ -25,22 +25,27 @@ function run() {
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	}
-	var_dump($config['endpoints']);
+	print_r($config['endpoints']);
 
 	// check if the request comes from github server
 	foreach ($config['endpoints'] as $endpoint) {
-		var_dump($payload->repository->url);
-		var_dump('https://github.com/' . $endpoint['repo']);
-		var_dump($payload->ref);
-		var_dump('refs/heads/' . $endpoint['branch']);
-	
+		print_r($payload->repository->url);
+		print_r('https://github.com/' . $endpoint['repo']);
+		print_r($payload->ref);
+		print_r('refs/heads/' . $endpoint['branch']);
+
 		// check if the push came from the right repository and branch
 		if ($payload->repository->url == 'https://github.com/' . $endpoint['repo']
 			&& $payload->ref == 'refs/heads/' . $endpoint['branch']) {
+
+			print_r("passed check");
 			// execute update script, and record its output
 			ob_start();
+			print_r($endpoint['run']);
 			passthru($endpoint['run']);
 			$output = ob_end_contents();
+
+			print_r("executed script);
 			// prepare and send the notification email
 			if (isset($config['email'])) {
 				// send mail to someone, and the github user who pushed the commit
@@ -68,7 +73,7 @@ function run() {
 			return true;
 		}
 	}
-	var_dump("DONE");
+	print_r("DONE");
 }
 try {
 	if (!isset($_POST['payload'])) {
