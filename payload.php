@@ -68,11 +68,8 @@ function run() {
     }
 }
 try {
-    if (!isset($_POST['payload'])) {
-        echo "Works fine.";
-    } else {
-        run();
-    }
+    run();
+    echo "works!";
 } catch ( Exception $e ) {
     $msg = $e->getMessage();
     mail($error_mail, $msg, ''.$e);
