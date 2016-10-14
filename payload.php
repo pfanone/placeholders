@@ -77,7 +77,7 @@ function run() {
 }
 try {
 	if (!isset($_POST['payload'])) {
-		echo "Works fine.";
+		print_r("Works fine.");
 	} else {
 		run();
 	}
