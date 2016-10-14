@@ -1,3 +1,7 @@
 #! /bin/bash
 
-git pull origin
+echo "Pulling code"
+
+sudo git pull origin master
+
+echo "Finished Pulling"
