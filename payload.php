@@ -1,4 +1,5 @@
-<?php
+#!/usr/bin/php5
+
 /*
  * Endpoint for Github Webhook URLs
  *
