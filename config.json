@@ -5,7 +5,7 @@
     },
     "endpoints": [
         {
-            "repo": "user/repository",
+            "repo": "https://github.com/pfanone/placeholders",
             "branch": "master",
             "action": "something has been changed on the server",
             "run": "./payload.sh"
