@@ -17,7 +17,7 @@ function run() {
         throw new Exception("Can't find ".$config_filename);
     }
     $config = json_decode(file_get_contents($config_filename), true);
-    $postBody = $_REQUEST['payload'];
+    $postBody = $_POST['payload'];
     $payload = json_decode($postBody);
     if (isset($config['email'])) {
         $headers = 'From: '.$config['email']['from']."\r\n";
@@ -68,7 +68,7 @@ function run() {
     }
 }
 try {
-    if (!isset($_REQUEST['payload'])) {
+    if (!isset($_POST['payload'])) {
         echo "Works fine.";
     } else {
         run();
