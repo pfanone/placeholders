@@ -43,8 +43,8 @@ function run() {
 			ob_start();
 			var_dump($endpoint['run']);
 			passthru($endpoint['run']);
-			$output = ob_end_contents();
-
+			$output = ob_get_contents();
+			var_dump($output);
 			var_dump("executed script");
 			// prepare and send the notification email
 			if (isset($config['email'])) {
