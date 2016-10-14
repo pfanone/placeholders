@@ -8,7 +8,7 @@
  *
  */
 // script errors will be send to this email:
-print_r($_POST);
+var_dump($_REQUEST);
 // $error_mail = "pfanone@gmail.com";
 // function run() {
 //     global $rawInput;
