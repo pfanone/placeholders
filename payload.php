@@ -64,6 +64,7 @@ function run() {
             }
         }
     } else {
+        echo $_SERVER['REMOTE_ADDR'];
         throw new Exception("This does not appear to be a valid requests from Github.\n");
     }
 }
