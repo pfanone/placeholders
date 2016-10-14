@@ -2,6 +2,6 @@
 
 echo "Pulling code"
 
-echo sudo git pull origin master
+sudo git pull origin master
 
 echo "Finished Pulling"
