@@ -8,7 +8,7 @@
             "repo": "pfanone/placeholders",
             "branch": "master",
             "action": "something has been changed on the server",
-            "run": "sudo ./payload.sh"
+            "run": "./payload.sh"
         }
     ]
 }
