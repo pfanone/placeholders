@@ -12,7 +12,7 @@ $error_mail = "pfanone@gmail.com";
 function run() {
     echo "Running";
 
-    shell_exec( 'cd /srv/www/git-repo/ && git reset --hard HEAD && git pull' );
+    shell_exec( 'git reset --hard HEAD && git pull' );
     
     echo "Works fine.";
     // global $rawInput;
