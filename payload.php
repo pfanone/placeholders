@@ -7,7 +7,7 @@
  * see: https://help.github.com/articles/post-receive-hooks
  *
  */
-dd($_POST['payload']);
+dump($_POST['payload']);
 
 // script errors will be send to this email:
 $error_mail = "pfanone@gmail.com";
@@ -70,8 +70,11 @@ function run() {
     }
 }
 try {
-    run();
-    echo "works!";
+    if (!isset($_POST['payload'])) {
+        echo "Works fine.";
+    } else {
+        run();
+    }
 } catch ( Exception $e ) {
     $msg = $e->getMessage();
     mail($error_mail, $msg, ''.$e);
