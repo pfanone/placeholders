@@ -26,13 +26,14 @@ function run() {
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	}
 	var_dump($config['endpoints']);
-	var_dump($payload->repository->url);
-	var_dump('https://github.com/' . $endpoint['repo']);
-	var_dump($payload->ref);
-	var_dump('refs/heads/' . $endpoint['branch']);
-	
+
 	// check if the request comes from github server
 	foreach ($config['endpoints'] as $endpoint) {
+		var_dump($payload->repository->url);
+		var_dump('https://github.com/' . $endpoint['repo']);
+		var_dump($payload->ref);
+		var_dump('refs/heads/' . $endpoint['branch']);
+	
 		// check if the push came from the right repository and branch
 		if ($payload->repository->url == 'https://github.com/' . $endpoint['repo']
 			&& $payload->ref == 'refs/heads/' . $endpoint['branch']) {
