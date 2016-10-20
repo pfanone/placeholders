@@ -21,95 +21,25 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body bgcolor="#000000" background="img/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
-		<center>
-		<CENTER>
-		<nobr>
-		<table border=0 cellpadding=0 cellspacing=0 width=488 height=60>
-			<tr>
-				<td align="center"><!--#include virtual="html.ng/site=spacejam&type=movie&home=no&size=234&page.allowcompete=no"--></td>
-				<td align="center" width="20"></td>
-				<td align="center"><!--#include virtual="html.ng/site=spacejam&type=movie&home=no&size=234"--></td>
-			</tr>
-		</table>
-		</NOBR>
-		</center><br>
-		<table width=500 border=0>
-			<tr>
-				<td align=left>
-				</td>
-				<td align=right>
-				</td>
-			</tr>
-		</table>
-		<br>
-		<br>
-		<table width=500 border=0>
-			<tr>
-				<td colspan=5 align=right valign=top></td>
-			</tr>
-			<tr>
-				<td colspan=2 align=right valign=middle>
-					<br>
-					<br>
-					<br>
-					<img src="img/p-pressbox.gif" height=56 width=131 alt="Press Box Shuttle" border=0>
-				</td>
-				<td align=center valign=middle>
-					<img src="img/p-jamcentral.gif" height=67 width=55 alt="Jam Central" border=0>
-				</td>
-				<td align=center valign=top>
-					<img src="img/p-bball.gif" height=62 width=62 alt="Planet B-Ball" border=0>
-				</td>
-				<td align=center valign=bottom>
-					<br>
-					<br>
-					<img src="img/p-lunartunes.gif" height=77 width=95 alt="Lunar Tunes" border=0>
-				</td>
-			</tr>
-			<tr>
-				<td align=middle valign=top>
-					<br>
-					<br>
-					<img src="img/p-lineup.gif" height=52 width=63 alt="The Lineup" border=0>
-				</td>
-				<td colspan=3 rowspan=2 align=right valign=middle>
-					<a href="https://www.facebook.com/holdthatplace/" target="_blank"><img src="img/placeholders_logo.png" height=165 width=165 alt="Placeholders Logo" border=0></a>
-				</td>
-				<td align=right valign=bottom>
-					<img src="img/p-jump.gif" height=52 width=58 alt="Jump Station" border=0>
-				</td>
-			</tr>
-			<tr>
-				<td align=center valign=bottom>
-					<img src="img/p-junior.gif" height=57 width=49 alt="Junior Jam" border=0>
-				</td>
-				<td rowspan=2 align=center valign=top>
-					<br>
-					<br>
-					<img src="img/p-studiostore.gif" height=72 width=94 alt="Warner Studio Store" border=0>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td align=center valign=top>
-					<img src="img/p-souvenirs.gif" height=83 width=83 alt="Stellar Souvenirs" border=0>
-				</td>
-				<td align=center valign=bottom>
-					<br>
-					<br>
-					<br>
-					<br>
-					<a href="/img/dodgeball_players.jpg" target="_blank"><img src="img/p-sitemap.gif" height=67 width=104 alt="Site Map" border=0></a>
-				</td>
-				<td align=center valign=middle>
-					<img src="img/p-behind.gif" height=63 width=67 alt="Behind the Jam" border=0>
-				</td>
-			</tr>
-		</table>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/7J0QdXBY0wo?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		
+		<div class="contatiner">
+			<div class="row" style="margin-top:150px;">
+				<div class="col-xs-12 col-sm-6 col-sm-offset-3" align="center">
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="https://www.facebook.com/holdthatplace/" target="_blank"><img src="img/placeholders_logo.png" height='400' width='400' alt="Placeholders Logo" border=0></a>
+						</div>
+						<div class="col-xs-12" style="margin-top:50px;">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/7J0QdXBY0wo?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js'></script>
+		<script src='/js/bootstrap.min.js'></script>
 		<script type="text/javascript">
 			$("iframe#ytplayer").attr("src", $("iframe#ytplayer").attr("src").replace("autoplay=0", "autoplay=1"));
 		</script>
